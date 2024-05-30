@@ -1,0 +1,16 @@
+Efficiency In Programming:
+
+Time => Time: We can compare which process takes less time to solve the problem. 
+
+Space => Storage: We can compare which process takes less storage to solve the problem. 
+
+
+Measure of time Efficiency:
+ 
+Techniques:
+1)Measuring time to execute:
+   in this we can calculate time using time module from python and check what is the overall time the program take to print the output
+
+2)Counting Operations involved:
+
+3)Abstract notion of Order of growth:
