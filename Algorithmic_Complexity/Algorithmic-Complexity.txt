@@ -9,8 +9,72 @@ Measure of time Efficiency:
  
 Techniques:
 1)Measuring time to execute:
-   in this we can calculate time using time module from python and check what is the overall time the program take to print the output
+   (1)In this we can calculate time using time module from python and check what is the overall time the program take to print the output.
+
+   (2)You can check the time.py file where i have run a for loop and while loop to print numbers uptill 100 where the for loop takes around 0.13s and a while loop takes around 0.12s to execute (so it means different approach takes different set of time to execute).
+
+   (3)But this is not the ideal way to calculate time.
 
 2)Counting Operations involved:
+   
 
 3)Abstract notion of Order of growth:
+  
+  Big oh notation measures an upper bound on the asymptotic growth, often called order of growth.
+  => O(). 
+  
+   exact steps vs O()
+   ==>> def fact_iter(n):
+        answer = 1
+        while n > 1:
+             answer *= no
+             n -= 1
+         return answer
+
+      here in the above code we can see there are 5 operations happening:
+       answer = 1 => 1 operations
+       answer is getting multiplied by n and giving the output => 2 operations
+       n is getting subtracted by 1 and giving the output => 2 operations
+
+       so the calculation would be 1 + 5n
+       where 1 is the first constant and 5n is the amount of operations running inside the loop.
+
+       so when we remove the additve constants which is 1, we got 5n, then after removing the multplicative constant which is 5 we got n.
+
+       so the time complexity of this code is O(n).
+
+       n² ==>> this is for the nested loops. (quadratic realtionship)
+       n ==>> operations going inside the loop.
+              for ex: if 2 operations are going on so it would be 2n.
+       1 ==>> it is nothing but a constant.
+
+       O(1) > O(logn) > O(n) > O(n logn) > O(n²) > O(n^2) > O(2^n)
+
+       c ==>> constant ==>> finding the value using index.
+
+       n ==>> linear ==>> Linear search.
+
+       n² ==>> quadratic ==>> nested loops, Sorting algorithms.
+
+       logn ==>> Logrithmic if input increase 10 times the output will increase with 1 ==>> Binary search.
+
+       n logn ==>> not good as compared to linear but it is better than n² ==>> merge sort, quick sort.
+
+       O(2^n) ==>> opposite of log 
+
+
+   Cases:
+   ==>> a funtion that searches for an element
+      def search(l,m):
+         for i in l:
+            if i in m:
+               return True
+         return False
+
+
+      In this above python code we have several Cases.
+      1)Best Case => When e is the first element.
+
+      2)Worst Case => When e is the last element or it is  not in the list.
+
+      3)Average Case => When you find e after looking through half of the elements in the list.
